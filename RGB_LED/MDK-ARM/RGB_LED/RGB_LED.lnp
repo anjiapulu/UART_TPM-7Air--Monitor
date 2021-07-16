@@ -1,0 +1,24 @@
+--cpu Cortex-M3
+"rgb_led\startup_stm32f103xe.o"
+"rgb_led\main.o"
+"rgb_led\gpio.o"
+"rgb_led\stm32f1xx_it.o"
+"rgb_led\stm32f1xx_hal_msp.o"
+"rgb_led\stm32f1xx_hal_gpio_ex.o"
+"rgb_led\stm32f1xx_hal_tim.o"
+"rgb_led\stm32f1xx_hal_tim_ex.o"
+"rgb_led\stm32f1xx_hal.o"
+"rgb_led\stm32f1xx_hal_rcc.o"
+"rgb_led\stm32f1xx_hal_rcc_ex.o"
+"rgb_led\stm32f1xx_hal_gpio.o"
+"rgb_led\stm32f1xx_hal_dma.o"
+"rgb_led\stm32f1xx_hal_cortex.o"
+"rgb_led\stm32f1xx_hal_pwr.o"
+"rgb_led\stm32f1xx_hal_flash.o"
+"rgb_led\stm32f1xx_hal_flash_ex.o"
+"rgb_led\stm32f1xx_hal_exti.o"
+"rgb_led\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "RGB_LED\RGB_LED.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "RGB_LED.map" -o RGB_LED\RGB_LED.axf
