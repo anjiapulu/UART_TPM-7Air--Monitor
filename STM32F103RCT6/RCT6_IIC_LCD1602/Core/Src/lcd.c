@@ -68,14 +68,15 @@ void lcd_init (void){
 	lcd_send_cmd(0x0C); // Enter mode set --> I/D = 1 (increment cursor) & S = 0 (no shift)
 	HAL_Delay(1);
 	//lcd_send_cmd(0x0E); // Display on /off control --> D = 1, C = 1, B = 0
-
 	HAL_Delay(1);
 }
 
 void lcd_send_string (char *str)
 	{
     while(*str)
-    {lcd_send_data(*str++);}
+		{
+    lcd_send_data(*str++);
+		}
 	  HAL_Delay(1);
  }
 

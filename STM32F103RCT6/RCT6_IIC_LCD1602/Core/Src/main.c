@@ -92,7 +92,6 @@ int main(void)
   
 	/* USER CODE BEGIN 2 */
   lcd_setspace_string(0,0,"Hello World!");
-	
 	lcd_setspace_string(1,0,"from  anjiapulu");
 	/* USER CODE END 2 */
 

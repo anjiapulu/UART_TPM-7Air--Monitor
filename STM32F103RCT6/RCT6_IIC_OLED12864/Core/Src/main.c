@@ -21,7 +21,7 @@
 #include "main.h"
 #include "i2c.h"
 #include "gpio.h"
-
+#include "oled.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -73,7 +73,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -86,10 +86,12 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_I2C1_Init();
+  OLED_Init();
   /* USER CODE BEGIN 2 */
-	//OLED_Clear();
+	OLED_Clear();
   /* USER CODE END 2 */
-
+    unsigned char buff[12]="hello world";
+    OLED_ShowString(0,0,buff,12);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
