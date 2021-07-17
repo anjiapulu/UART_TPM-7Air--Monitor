@@ -1,0 +1,27 @@
+--cpu Cortex-M3
+"rct6_iic_lcd1602\startup_stm32f103xe.o"
+"rct6_iic_lcd1602\main.o"
+"rct6_iic_lcd1602\gpio.o"
+"rct6_iic_lcd1602\i2c.o"
+"rct6_iic_lcd1602\stm32f1xx_it.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_msp.o"
+"rct6_iic_lcd1602\lcd.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_gpio_ex.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_i2c.o"
+"rct6_iic_lcd1602\stm32f1xx_hal.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_rcc.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_rcc_ex.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_gpio.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_dma.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_cortex.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_pwr.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_flash.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_flash_ex.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_exti.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_tim.o"
+"rct6_iic_lcd1602\stm32f1xx_hal_tim_ex.o"
+"rct6_iic_lcd1602\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "RCT6_IIC_LCD1602\RCT6_IIC_LCD1602.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "RCT6_IIC_LCD1602.map" -o RCT6_IIC_LCD1602\RCT6_IIC_LCD1602.axf
