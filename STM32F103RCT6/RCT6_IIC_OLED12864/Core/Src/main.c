@@ -64,9 +64,9 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+	
   /* USER CODE END 1 */
-
+	
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
@@ -90,8 +90,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	OLED_Clear();
   /* USER CODE END 2 */
-    unsigned char buff[12]="hello world";
-    OLED_ShowString(0,0,buff,12);
+  OLED_ShowString(0,0,"hello world");
+	OLED_ShowString(0,3,"from anjiapulu");
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

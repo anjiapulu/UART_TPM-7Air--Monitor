@@ -1,7 +1,8 @@
 #include "oled.h"
 #include "i2c.h"
 #include "oledfont.h"          //头文件
-uint8_t CMD_Data[]={
+uint8_t CMD_Data[]=
+{
 0xAE,	
 0x00,	
 0x10,	
@@ -27,8 +28,8 @@ uint8_t CMD_Data[]={
 0xD8,
 0x30,
 0x8D,
-0x14,	
-0xAF	
+0x14,
+0xAF
 };      //初始化命令
 
 
@@ -167,12 +168,12 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size)
 }
  
 //显示一个字符号串
-void OLED_ShowString(uint8_t x,uint8_t y,uint8_t *chr,uint8_t Char_Size)
+void OLED_ShowString(uint8_t x,uint8_t y,uint8_t *s)
 {
 	unsigned char j=0;
-	while (chr[j]!='\0')
+	while (s[j]!='\0')
 	{		
-		OLED_ShowChar(x,y,chr[j],Char_Size);//一次显示一个字符
+		OLED_ShowChar(x,y,s[j],sizeof(s));//一次显示一个字符
 			x+=8;
 		if(x>120){x=0;y+=2;}
 			j++;
@@ -193,9 +194,9 @@ void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t no)
      }	
 		OLED_Set_Pos(x,y+1);	
     for(t=0;t<16;t++)
-			{	
+		{	
 				OLED_WR_DATA(Hzk[2*no+1][t]);
 				adder+=1;
-      }					
+    }					
 }
 
