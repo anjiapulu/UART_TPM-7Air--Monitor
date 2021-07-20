@@ -1,0 +1,5 @@
+
+*.json
+*.sqlite
+.vs/stm32/v16/.suo
+*.db
