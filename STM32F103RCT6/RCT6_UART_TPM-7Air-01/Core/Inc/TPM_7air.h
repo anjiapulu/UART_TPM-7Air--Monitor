@@ -1,10 +1,10 @@
 #ifndef __TMP_7air_H__
 #define __TMP_7air_H__
-#include "main.h"
+#include "stm32f1xx_hal.h"
 /*------------------------------------------------------------------------------
  *  Struct
  *-----------------------------------------------------------------------------*/
-typedef struct{
+typedef struct {
 	unsigned int CO2_DATA;
 	unsigned int CH20_DATA;
 	unsigned int TVOC_DATA;
@@ -16,8 +16,8 @@ typedef struct{
 	unsigned int  Humidity1_DATA;
 	uint8_t Rx_buff[17];
 }
- UART_TMP_7AIR_T;
-extern UART_TMP_7AIR_T uart_tmp_7air;       	
+UART_TMP_7AIR_T;
+extern UART_TMP_7AIR_T uart_tmp_7air;
 
 void tpm_receive_count();
 #endif

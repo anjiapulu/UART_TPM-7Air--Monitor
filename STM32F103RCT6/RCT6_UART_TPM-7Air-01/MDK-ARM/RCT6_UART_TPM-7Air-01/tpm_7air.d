@@ -1,6 +1,5 @@
 rct6_uart_tpm-7air-01\tpm_7air.o: ..\Core\Src\TPM_7air.c
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/TPM_7air.h
-rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/main.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/stm32f1xx_hal_conf.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -29,6 +28,6 @@ rct6_uart_tpm-7air-01\tpm_7air.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 rct6_uart_tpm-7air-01\tpm_7air.o: D:\Program Files\tools\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-rct6_uart_tpm-7air-01\tpm_7air.o: D:\Program Files\tools\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/usart.h
+rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/main.h
 rct6_uart_tpm-7air-01\tpm_7air.o: ../Core/Inc/oled.h

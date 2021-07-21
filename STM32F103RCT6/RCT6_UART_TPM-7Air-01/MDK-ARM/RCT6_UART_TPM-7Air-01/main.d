@@ -32,3 +32,4 @@ rct6_uart_tpm-7air-01\main.o: ../Core/Inc/usart.h
 rct6_uart_tpm-7air-01\main.o: ../Core/Inc/gpio.h
 rct6_uart_tpm-7air-01\main.o: ../Core/Inc/oled.h
 rct6_uart_tpm-7air-01\main.o: ../Core/Inc/TPM_7air.h
+rct6_uart_tpm-7air-01\main.o: D:\Program Files\tools\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
