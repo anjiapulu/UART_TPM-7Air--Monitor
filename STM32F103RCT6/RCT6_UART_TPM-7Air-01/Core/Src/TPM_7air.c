@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include "usart.h"
 #include "oled.h"
-extern char Temper[16];
-int i;
 UART_TMP_7AIR_T uart_tmp_7air =
 {
 	.CO2_DATA = 0,
@@ -37,6 +35,5 @@ void tpm_receive_count()
 		uart_tmp_7air.Humidity0_DATA = uart_tmp_7air.Rx_buff[14];
 		uart_tmp_7air.Humidity1_DATA = uart_tmp_7air.Rx_buff[15];
 	}
-
 
 }
