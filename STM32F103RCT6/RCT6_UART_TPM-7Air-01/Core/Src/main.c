@@ -58,7 +58,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
- uint8_t Tx_str0[]="hello world";
 /* USER CODE END 0 */
 
 /**
@@ -101,9 +100,9 @@ int main(void)
   {
     /* USER CODE END WHILE */
     tpm_receive_count();
-
 		/* USER CODE BEGIN 3 */
   }
+	return 0;
   /* USER CODE END 3 */
 }
 

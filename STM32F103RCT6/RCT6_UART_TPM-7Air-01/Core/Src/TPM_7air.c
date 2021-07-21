@@ -15,12 +15,13 @@ UART_TMP_7AIR_T uart_tmp_7air=
 	.Temperature1_DATA=0,
 	.Humidity0_DATA=0,
 	.Humidity1_DATA=0,
+	.Rx_buff=0
 };
 void tpm_receive_count()
 {
 		 if(uart_tmp_7air.Rx_buff[0]!=0x3C&&uart_tmp_7air.Rx_buff[1]!=0x02)
 	 {
-      HAL_UART_Receive(&huart4,uart_tmp_7air.Rx_buff,sizeof(uart_tmp_7air.Rx_buff),10);
+      HAL_UART_Receive(&huart4,uart_tmp_7air.Rx_buff,sizeof(uart_tmp_7air.Rx_buff),1000);
 	 }
 	 else 
 		 {
@@ -43,6 +44,15 @@ void tpm_receive_count()
 	   OLED_ShowString(0,4,Temper);
 	 	 sprintf(Temper,"PM2.5:%d ug/m3", uart_tmp_7air.PM25_DATA);
 		 OLED_ShowString(0,6,Temper);
+		 HAL_Delay(2000);
+		 OLED_Clear();
+		 sprintf(Temper,"PM10:%d ug/m3", uart_tmp_7air.PM10_DATA);
+		 OLED_ShowString(0,0,Temper);
+		 sprintf(Temper,"T:%d.%d `C", uart_tmp_7air.Temperature0_DATA,uart_tmp_7air.Temperature1_DATA);
+		 OLED_ShowString(0,2,Temper);
+		 sprintf(Temper,"H:%d.%d %%", uart_tmp_7air.Humidity0_DATA,uart_tmp_7air.Humidity1_DATA);
+		 OLED_ShowString(0,4,Temper);
+		 HAL_Delay(2000);
 	   }
 
 	 

@@ -731,9 +731,9 @@ Image Symbol Table
     i.__scatterload_null                     0x0800129e   Section        2  handlers.o(i.__scatterload_null)
     i.__scatterload_zeroinit                 0x080012a0   Section       14  handlers.o(i.__scatterload_zeroinit)
     i.main                                   0x080012b0   Section        0  main.o(i.main)
-    .constdata                               0x080012fc   Section     2376  oled.o(.constdata)
-    .constdata                               0x08001c44   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08001c54   Section        8  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08001300   Section     2376  oled.o(.constdata)
+    .constdata                               0x08001c48   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08001c58   Section        8  system_stm32f1xx.o(.constdata)
     .data                                    0x20000000   Section       27  oled.o(.data)
     .data                                    0x2000001c   Section       12  stm32f1xx_hal.o(.data)
     .data                                    0x20000028   Section        4  system_stm32f1xx.o(.data)
@@ -879,13 +879,13 @@ Image Symbol Table
     __scatterload_null                       0x0800129f   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x080012a1   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     main                                     0x080012b1   Thumb Code    46  main.o(i.main)
-    F6x8                                     0x080012fc   Data         552  oled.o(.constdata)
-    F8X16                                    0x08001524   Data        1504  oled.o(.constdata)
-    Hzk                                      0x08001b04   Data         320  oled.o(.constdata)
-    AHBPrescTable                            0x08001c44   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08001c54   Data           8  system_stm32f1xx.o(.constdata)
-    Region$$Table$$Base                      0x08001c5c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001c7c   Number         0  anon$$obj.o(Region$$Table)
+    F6x8                                     0x08001300   Data         552  oled.o(.constdata)
+    F8X16                                    0x08001528   Data        1504  oled.o(.constdata)
+    Hzk                                      0x08001b08   Data         320  oled.o(.constdata)
+    AHBPrescTable                            0x08001c48   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08001c58   Data           8  system_stm32f1xx.o(.constdata)
+    Region$$Table$$Base                      0x08001c60   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001c80   Number         0  anon$$obj.o(Region$$Table)
     CMD_Data                                 0x20000000   Data          27  oled.o(.data)
     uwTickFreq                               0x2000001c   Data           1  stm32f1xx_hal.o(.data)
     uwTickPrio                               0x20000020   Data           4  stm32f1xx_hal.o(.data)
@@ -902,9 +902,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000131
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001ca8, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001cac, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001c7c, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001c80, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -976,21 +976,21 @@ Memory Map of the image
     0x0800129e   0x0800129e   0x00000002   Code   RO         1954    i.__scatterload_null  mc_w.l(handlers.o)
     0x080012a0   0x080012a0   0x0000000e   Code   RO         1955    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x080012ae   0x080012ae   0x00000002   PAD
-    0x080012b0   0x080012b0   0x0000004c   Code   RO          210    i.main              main.o
-    0x080012fc   0x080012fc   0x00000948   Data   RO           27    .constdata          oled.o
-    0x08001c44   0x08001c44   0x00000010   Data   RO         1893    .constdata          system_stm32f1xx.o
-    0x08001c54   0x08001c54   0x00000008   Data   RO         1894    .constdata          system_stm32f1xx.o
-    0x08001c5c   0x08001c5c   0x00000020   Data   RO         1951    Region$$Table       anon$$obj.o
+    0x080012b0   0x080012b0   0x00000050   Code   RO          210    i.main              main.o
+    0x08001300   0x08001300   0x00000948   Data   RO           27    .constdata          oled.o
+    0x08001c48   0x08001c48   0x00000010   Data   RO         1893    .constdata          system_stm32f1xx.o
+    0x08001c58   0x08001c58   0x00000008   Data   RO         1894    .constdata          system_stm32f1xx.o
+    0x08001c60   0x08001c60   0x00000020   Data   RO         1951    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001c7c, Size: 0x00000480, Max: 0x0000c000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001c80, Size: 0x00000480, Max: 0x0000c000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08001c7c   0x0000001b   Data   RW           28    .data               oled.o
-    0x2000001b   0x08001c97   0x00000001   PAD
-    0x2000001c   0x08001c98   0x0000000c   Data   RW          905    .data               stm32f1xx_hal.o
-    0x20000028   0x08001ca4   0x00000004   Data   RW         1895    .data               system_stm32f1xx.o
+    0x20000000   0x08001c80   0x0000001b   Data   RW           28    .data               oled.o
+    0x2000001b   0x08001c9b   0x00000001   PAD
+    0x2000001c   0x08001c9c   0x0000000c   Data   RW          905    .data               stm32f1xx_hal.o
+    0x20000028   0x08001ca8   0x00000004   Data   RW         1895    .data               system_stm32f1xx.o
     0x2000002c        -       0x00000054   Zero   RW          274    .bss                i2c.o
     0x20000080        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xe.o
 
@@ -1004,7 +1004,7 @@ Image component sizes
 
        168         12          0          0          0       1003   gpio.o
        156         26          0          0         84       1697   i2c.o
-       160         30          0          0          0       1912   main.o
+       164         34          0          0          0       1908   main.o
        414         28       2376         27          0     458741   oled.o
         36          8        304          0       1024        820   startup_stm32f103xe.o
        164         28          0         12          0       6645   stm32f1xx_hal.o
@@ -1017,7 +1017,7 @@ Image component sizes
          2          0         24          4          0       1167   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-      4428        316       2736         44       1108     522319   Object Totals
+      4432        320       2736         44       1108     522315   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          0          1          0          0   (incl. Padding)
 
@@ -1058,15 +1058,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4556        332       2736         44       1108     520359   Grand Totals
-      4556        332       2736         44       1108     520359   ELF Image Totals
-      4556        332       2736         44          0          0   ROM Totals
+      4560        336       2736         44       1108     520355   Grand Totals
+      4560        336       2736         44       1108     520355   ELF Image Totals
+      4560        336       2736         44          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 7292 (   7.12kB)
+    Total RO  Size (Code + RO Data)                 7296 (   7.13kB)
     Total RW  Size (RW Data + ZI Data)              1152 (   1.13kB)
-    Total ROM Size (Code + RO Data + RW Data)       7336 (   7.16kB)
+    Total ROM Size (Code + RO Data + RW Data)       7340 (   7.17kB)
 
 ==============================================================================
 

@@ -90,8 +90,8 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	OLED_Clear();
   /* USER CODE END 2 */
-  OLED_ShowString(0,0,"hello world");
-	OLED_ShowString(0,3,"from anjiapulu");
+  OLED_ShowString(0,2,"Hello New World");
+	OLED_ShowString(0,4,"From Anjiapulu");
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)

@@ -10,10 +10,10 @@ typedef struct{
 	unsigned int TVOC_DATA;
 	unsigned int PM25_DATA;
 	unsigned int PM10_DATA;
-	unsigned char Temperature0_DATA;
+	unsigned int Temperature0_DATA;
 	unsigned int Temperature1_DATA;
-	unsigned char Humidity0_DATA;
-	unsigned int Humidity1_DATA;
+	unsigned int  Humidity0_DATA;
+	unsigned int  Humidity1_DATA;
 	uint8_t Rx_buff[17];
 }
  UART_TMP_7AIR_T;
